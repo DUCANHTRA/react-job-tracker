@@ -1,0 +1,182 @@
+[
+    {
+      "id": "1",
+      "company": "TechCorp Solutions",
+      "title": "Frontend Developer",
+      "status": "Applied",
+      "appliedDate": "2024-01-15",
+      "notes": "We are looking for a skilled Frontend Developer to join our team. You will be responsible for building user-friendly web applications using React, JavaScript, and modern CSS frameworks.",
+      "createdAt": "2024-01-15T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "company": "DataFlow Systems",
+      "title": "Backend Engineer",
+      "status": "Interviewing",
+      "appliedDate": "2024-01-20",
+      "notes": "Join our backend team to develop scalable APIs and microservices. Experience with Node.js, Python, and cloud platforms required.",
+      "createdAt": "2024-01-20T00:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "company": "Creative Studios Inc",
+      "title": "UX/UI Designer",
+      "status": "Rejected",
+      "appliedDate": "2024-01-10",
+      "notes": "Create beautiful and intuitive user experiences. Proficiency in Figma, Adobe Creative Suite, and user research methodologies required.",
+      "createdAt": "2024-01-10T00:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "company": "CloudTech Solutions",
+      "title": "DevOps Engineer",
+      "status": "Applied",
+      "appliedDate": "2024-01-25",
+      "notes": "Manage our cloud infrastructure and CI/CD pipelines. Experience with AWS, Docker, and Kubernetes preferred.",
+      "createdAt": "2024-01-25T00:00:00.000Z"
+    },
+    {
+      "id": "5",
+      "company": "AppWorks Mobile",
+      "title": "Mobile App Developer",
+      "status": "Interviewing",
+      "appliedDate": "2024-01-18",
+      "notes": "Develop native iOS and Android applications. Strong knowledge of Swift, Kotlin, and mobile development best practices required.",
+      "createdAt": "2024-01-18T00:00:00.000Z"
+    },
+    {
+      "id": "6",
+      "company": "Analytics Pro",
+      "title": "Data Scientist",
+      "status": "Applied",
+      "appliedDate": "2024-01-22",
+      "notes": "Build machine learning models and analyze large datasets. Proficiency in Python, R, and statistical analysis required.",
+      "createdAt": "2024-01-22T00:00:00.000Z"
+    },
+    {
+      "id": "7",
+      "company": "InnovateTech",
+      "title": "Product Manager",
+      "status": "Interviewing",
+      "appliedDate": "2024-01-12",
+      "notes": "Lead product development from conception to launch. Strong analytical skills and experience with agile methodologies required.",
+      "createdAt": "2024-01-12T00:00:00.000Z"
+    },
+    {
+      "id": "8",
+      "company": "Quality Assurance Labs",
+      "title": "QA Engineer",
+      "status": "Applied",
+      "appliedDate": "2024-01-28",
+      "notes": "Ensure software quality through comprehensive testing. Experience with automated testing tools and methodologies required.",
+      "createdAt": "2024-01-28T00:00:00.000Z"
+    },
+    {
+      "id": "9",
+      "company": "WebSolutions",
+      "title": "Full Stack Developer",
+      "status": "Rejected",
+      "appliedDate": "2024-01-14",
+      "notes": "Develop end-to-end web applications. Proficiency in JavaScript, React, Node.js, and database technologies required.",
+      "createdAt": "2024-01-14T00:00:00.000Z"
+    },
+    {
+      "id": "10",
+      "company": "SecureNet Systems",
+      "title": "Cybersecurity Analyst",
+      "status": "Applied",
+      "appliedDate": "2024-01-30",
+      "notes": "Protect our systems from cyber threats. Experience with security tools, incident response, and compliance frameworks required.",
+      "createdAt": "2024-01-30T00:00:00.000Z"
+    },
+    {
+      "id": "11",
+      "company": "Documentation Pro",
+      "title": "Technical Writer",
+      "status": "Interviewing",
+      "appliedDate": "2024-01-16",
+      "notes": "Create clear and comprehensive technical documentation. Experience with API documentation and technical writing tools required.",
+      "createdAt": "2024-01-16T00:00:00.000Z"
+    },
+    {
+      "id": "12",
+      "company": "IT Infrastructure Corp",
+      "title": "System Administrator",
+      "status": "Applied",
+      "appliedDate": "2024-01-24",
+      "notes": "Manage and maintain our IT infrastructure. Experience with Linux, Windows Server, and network administration required.",
+      "createdAt": "2024-01-24T00:00:00.000Z"
+    },
+    {
+      "id": "13",
+      "company": "Artificial Intelligence Labs",
+      "title": "AI/ML Engineer",
+      "status": "Interviewing",
+      "appliedDate": "2024-01-19",
+      "notes": "Develop cutting-edge AI and machine learning solutions. Strong background in deep learning, TensorFlow, and PyTorch required.",
+      "createdAt": "2024-01-19T00:00:00.000Z"
+    },
+    {
+      "id": "14",
+      "company": "GameStudio Entertainment",
+      "title": "Game Developer",
+      "status": "Applied",
+      "appliedDate": "2024-01-26",
+      "notes": "Create engaging video games using Unity or Unreal Engine. Experience with C#, C++, and game development pipelines required.",
+      "createdAt": "2024-01-26T00:00:00.000Z"
+    },
+    {
+      "id": "15",
+      "company": "CryptoChain Solutions",
+      "title": "Blockchain Developer",
+      "status": "Interviewing",
+      "appliedDate": "2024-01-21",
+      "notes": "Develop decentralized applications and smart contracts. Experience with Solidity, Ethereum, and blockchain technologies required.",
+      "createdAt": "2024-01-21T00:00:00.000Z"
+    },
+    {
+      "id": "16",
+      "company": "NetConnect Systems",
+      "title": "Network Engineer",
+      "status": "Applied",
+      "appliedDate": "2024-01-17",
+      "notes": "Design and maintain network infrastructure. Experience with Cisco, Juniper, and network security protocols required.",
+      "createdAt": "2024-01-17T00:00:00.000Z"
+    },
+    {
+      "id": "17",
+      "company": "Business Intelligence Corp",
+      "title": "Business Analyst",
+      "status": "Rejected",
+      "appliedDate": "2024-01-13",
+      "notes": "Analyze business processes and requirements. Strong analytical skills and experience with business analysis tools required.",
+      "createdAt": "2024-01-13T00:00:00.000Z"
+    },
+    {
+      "id": "18",
+      "company": "CloudScale Solutions",
+      "title": "Cloud Architect",
+      "status": "Interviewing",
+      "appliedDate": "2024-01-29",
+      "notes": "Design and implement cloud infrastructure solutions. Experience with AWS, Azure, and cloud architecture patterns required.",
+      "createdAt": "2024-01-29T00:00:00.000Z"
+    },
+    {
+      "id": "19",
+      "company": "DataManagement Inc",
+      "title": "Database Administrator",
+      "status": "Applied",
+      "appliedDate": "2024-01-23",
+      "notes": "Manage and optimize database systems. Experience with SQL Server, PostgreSQL, and database performance tuning required.",
+      "createdAt": "2024-01-23T00:00:00.000Z"
+    },
+    {
+      "id": "20",
+      "company": "Reliability Systems",
+      "title": "Site Reliability Engineer",
+      "status": "Interviewing",
+      "appliedDate": "2024-01-27",
+      "notes": "Ensure system reliability and performance. Experience with monitoring tools, automation, and incident response required.",
+      "createdAt": "2024-01-27T00:00:00.000Z"
+    }
+  ] 
