@@ -80,24 +80,24 @@ export default function AddJob() {
     <div className="animate-fade-in-up">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
-        <div className="mb-8">
+        <div className="mb-6 sm:mb-8">
           <div className="flex items-center space-x-4 mb-4">
-            <Link to="/" className="btn-secondary flex items-center space-x-2">
+            <Link to="/" className="btn-secondary flex items-center space-x-2 text-sm sm:text-base">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
               <span>Back to Dashboard</span>
             </Link>
           </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Add New Job Application</h1>
-          <p className="text-gray-600">Track your job application details and progress</p>
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Add New Job Application</h1>
+          <p className="text-gray-600 text-sm sm:text-base">Track your job application details and progress</p>
         </div>
 
         {/* Form */}
-        <div className="card p-8">
+        <div className="card p-6 sm:p-8">
           <form onSubmit={onSubmit} className="space-y-6">
             {/* Company and Title Row */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                   Company Name *
@@ -132,7 +132,7 @@ export default function AddJob() {
             </div>
 
             {/* Status and Date Row */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">
                   Application Status
@@ -186,15 +186,15 @@ export default function AddJob() {
             </div>
 
             {/* Form Actions */}
-            <div className="flex items-center justify-between pt-6 border-t border-gray-200">
-              <Link to="/" className="btn-secondary">
+            <div className="flex flex-col sm:flex-row items-center justify-between pt-6 border-t border-gray-200 space-y-3 sm:space-y-0">
+              <Link to="/" className="btn-secondary w-full sm:w-auto text-center">
                 Cancel
               </Link>
               
               <button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="btn-primary flex items-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="btn-primary flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto"
               >
                 {isSubmitting ? (
                   <>
@@ -218,7 +218,7 @@ export default function AddJob() {
         </div>
 
         {/* Tips Section */}
-        <div className="mt-8 card p-6 bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
+        <div className="mt-6 sm:mt-8 card p-4 sm:p-6 bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
           <div className="flex items-start space-x-3">
             <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
               <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -226,8 +226,8 @@ export default function AddJob() {
               </svg>
             </div>
             <div>
-              <h3 className="font-semibold text-blue-900 mb-2">Pro Tips</h3>
-              <ul className="text-sm text-blue-800 space-y-1">
+              <h3 className="font-semibold text-blue-900 mb-2 text-sm sm:text-base">Pro Tips</h3>
+              <ul className="text-xs sm:text-sm text-blue-800 space-y-1">
                 <li>• Update the status as your application progresses</li>
                 <li>• Add detailed notes about interviews and follow-ups</li>
                 <li>• Use the dashboard to track your application pipeline</li>

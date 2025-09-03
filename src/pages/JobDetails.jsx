@@ -74,14 +74,14 @@ export default function JobDetails() {
     return (
       <div className="animate-fade-in-up">
         <div className="max-w-2xl mx-auto">
-          <div className="card p-12 text-center">
-            <div className="w-24 h-24 bg-gradient-to-r from-red-100 to-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg className="w-12 h-12 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="card p-8 sm:p-12 text-center">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-r from-red-100 to-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-10 h-10 sm:w-12 sm:h-12 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Job Not Found</h3>
-            <p className="text-gray-600 mb-6">The job application you're looking for doesn't exist or has been removed.</p>
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">Job Not Found</h3>
+            <p className="text-gray-600 mb-6 text-sm sm:text-base">The job application you're looking for doesn't exist or has been removed.</p>
             <Link to="/" className="btn-primary inline-flex items-center space-x-2">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
@@ -132,9 +132,9 @@ export default function JobDetails() {
     <div className="animate-fade-in-up">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="mb-8">
+        <div className="mb-6 sm:mb-8">
           <div className="flex items-center space-x-4 mb-4">
-            <Link to="/" className="btn-secondary flex items-center space-x-2">
+            <Link to="/" className="btn-secondary flex items-center space-x-2 text-sm sm:text-base">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
@@ -147,20 +147,20 @@ export default function JobDetails() {
           /* View Mode */
           <div className="space-y-6">
             {/* Job Header Card */}
-            <div className="card p-8">
-              <div className="flex items-start justify-between mb-6">
+            <div className="card p-6 sm:p-8">
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6 space-y-4 lg:space-y-0">
                 <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-gray-100 to-gray-200 rounded-xl flex items-center justify-center">
-                    <svg className="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-gray-100 to-gray-200 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 sm:w-8 sm:h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                   </div>
-                  <div>
-                    <h1 className="text-3xl font-bold text-gray-900 mb-2">{job.company}</h1>
-                    <p className="text-xl text-gray-600 font-medium">{job.title}</p>
+                  <div className="min-w-0 flex-1">
+                    <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 break-words">{job.company}</h1>
+                    <p className="text-lg sm:text-xl text-gray-600 font-medium break-words">{job.title}</p>
                     <div className="flex items-center space-x-4 mt-3">
                       <div className="flex items-center space-x-2 text-sm text-gray-500">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
                         <span>Applied: {formatDate(job.appliedDate)}</span>
@@ -169,8 +169,8 @@ export default function JobDetails() {
                   </div>
                 </div>
                 
-                <div className="text-right">
-                  <div className={`status-badge ${status.bgColor} ${status.textColor} border border-opacity-20 px-4 py-2`}>
+                <div className="text-left lg:text-right">
+                  <div className={`status-badge ${status.bgColor} ${status.textColor} border border-opacity-20 px-3 sm:px-4 py-2 inline-block`}>
                     <div className="flex items-center space-x-2">
                       {status.icon}
                       <span className="font-semibold text-sm">{job.status}</span>
@@ -180,10 +180,10 @@ export default function JobDetails() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex items-center justify-end space-x-3 pt-6 border-t border-gray-200">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-end space-y-3 sm:space-y-0 sm:space-x-3 pt-6 border-t border-gray-200">
                 <button 
                   onClick={() => setIsEditing(true)} 
-                  className="btn-secondary flex items-center space-x-2"
+                  className="btn-secondary flex items-center justify-center space-x-2 w-full sm:w-auto"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
@@ -194,7 +194,7 @@ export default function JobDetails() {
                 <button 
                   onClick={handleDelete}
                   disabled={isDeleting}
-                  className="px-4 py-2 bg-red-600 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
+                  className="px-4 py-2 bg-red-600 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 w-full sm:w-auto"
                 >
                   {isDeleting ? (
                     <>
@@ -217,7 +217,7 @@ export default function JobDetails() {
             </div>
 
             {/* Notes Card */}
-            <div className="card p-6">
+            <div className="card p-4 sm:p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center space-x-2">
                 <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -227,30 +227,30 @@ export default function JobDetails() {
               
               {job.notes ? (
                 <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-gray-300">
-                  <p className="text-gray-700 whitespace-pre-wrap leading-relaxed">{job.notes}</p>
+                  <p className="text-gray-700 whitespace-pre-wrap leading-relaxed text-sm sm:text-base">{job.notes}</p>
                 </div>
               ) : (
                 <div className="text-center py-8 text-gray-500">
                   <svg className="w-12 h-12 mx-auto mb-3 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
-                  <p>No notes added yet</p>
-                  <p className="text-sm">Click edit to add notes about this application</p>
+                  <p className="text-sm sm:text-base">No notes added yet</p>
+                  <p className="text-xs sm:text-sm">Click edit to add notes about this application</p>
                 </div>
               )}
             </div>
           </div>
         ) : (
           /* Edit Mode */
-          <div className="card p-8">
+          <div className="card p-6 sm:p-8">
             <div className="mb-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Edit Job Application</h2>
-              <p className="text-gray-600">Update the details of your job application</p>
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Edit Job Application</h2>
+              <p className="text-gray-600 text-sm sm:text-base">Update the details of your job application</p>
             </div>
 
             <form onSubmit={handleSave} className="space-y-6">
               {/* Company and Title Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Company Name
@@ -279,7 +279,7 @@ export default function JobDetails() {
               </div>
 
               {/* Status and Date Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Application Status
@@ -327,7 +327,7 @@ export default function JobDetails() {
               </div>
 
               {/* Form Actions */}
-              <div className="flex items-center justify-between pt-6 border-t border-gray-200">
+              <div className="flex flex-col sm:flex-row items-center justify-between pt-6 border-t border-gray-200 space-y-3 sm:space-y-0">
                 <button 
                   type="button" 
                   onClick={() => { 
@@ -340,12 +340,12 @@ export default function JobDetails() {
                       notes: job.notes || ''
                     }); 
                   }} 
-                  className="btn-secondary"
+                  className="btn-secondary w-full sm:w-auto text-center"
                 >
                   Cancel
                 </button>
                 
-                <button type="submit" className="btn-primary flex items-center space-x-2">
+                <button type="submit" className="btn-primary flex items-center justify-center space-x-2 w-full sm:w-auto">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>

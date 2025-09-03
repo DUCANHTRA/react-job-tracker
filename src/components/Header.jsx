@@ -42,33 +42,33 @@ export default function Header() {
 
   // Return the header
   return (
-    <header className="glass-effect sticky top-0 z-50 backdrop-blur-md">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+    <header className="glass-effect">
+      <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-3 sm:space-y-0">
           {/* Logo and Brand */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center justify-center sm:justify-start space-x-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6" />
                 </svg>
               </div>
-              <div>
-                <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  JobTracker
+              <div className="text-center sm:text-left">
+                <Link to="/" className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  JobQuest
                 </Link>
-                <p className="text-sm text-gray-600 font-medium">Track your career journey</p>
+                <p className="text-xs sm:text-sm text-gray-600 font-medium">Track your career journey</p>
               </div>
             </div>
           </div>
 
           {/* Navigation and Actions */}
-          <div className="flex items-center space-x-4">
+          <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4">
             {/* Navigation Links */}
             <nav className="flex items-center space-x-2">
               <Link
                 to="/"
-                className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                className={`px-3 sm:px-4 py-2 rounded-lg font-medium transition-all duration-200 text-sm sm:text-base ${
                   loc.pathname === '/' 
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg' 
                     : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
@@ -85,7 +85,7 @@ export default function Header() {
               
               <Link 
                 to="/add" 
-                className="px-4 py-2 rounded-lg font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-all duration-200"
+                className="px-3 sm:px-4 py-2 rounded-lg font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-all duration-200 text-sm sm:text-base"
               >
                 <div className="flex items-center space-x-2">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -96,31 +96,31 @@ export default function Header() {
               </Link>
             </nav>
 
-            {/* Divider */}
-            <div className="w-px h-8 bg-gray-300"></div>
+            {/* Divider - Hidden on mobile */}
+            <div className="hidden sm:block w-px h-8 bg-gray-300"></div>
 
             {/* Action Buttons */}
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2 sm:space-x-3">
               <button 
                 onClick={handleExport} 
-                className="btn-secondary flex items-center space-x-2"
+                className="btn-secondary flex items-center space-x-2 text-sm px-3 py-2"
                 title="Export all jobs to JSON"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                <span>Export</span>
+                <span className="hidden sm:inline">Export</span>
               </button>
 
               <button
                 onClick={() => fileRef.current.click()}
-                className="btn-secondary flex items-center space-x-2"
+                className="btn-secondary flex items-center space-x-2 text-sm px-3 py-2"
                 title="Import jobs from JSON file"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                 </svg>
-                <span>Import</span>
+                <span className="hidden sm:inline">Import</span>
               </button>
 
               <input

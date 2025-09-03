@@ -55,39 +55,39 @@ export default function JobCard({ job }) {
 
   return (
     <Link to={`/jobs/${job.id}`} className="group">
-      <div className="card p-6 hover:shadow-2xl transition-all duration-300 group-hover:scale-[1.02]">
+      <div className="card p-4 sm:p-6 hover:shadow-2xl transition-all duration-300 group-hover:scale-[1.02]">
         
         {/* Header with Company and Status */}
-        <div className="flex justify-between items-start mb-4">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4 space-y-3 sm:space-y-0">
           <div className="flex-1">
             <div className="flex items-center space-x-3 mb-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg flex items-center justify-center group-hover:bg-gradient-to-r group-hover:from-blue-100 group-hover:to-purple-100 transition-all duration-300">
-                <svg className="w-5 h-5 text-gray-600 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg flex items-center justify-center group-hover:bg-gradient-to-r group-hover:from-blue-100 group-hover:to-purple-100 transition-all duration-300 flex-shrink-0">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
-              <div>
-                <h3 className="font-bold text-lg text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+              <div className="min-w-0 flex-1">
+                <h3 className="font-bold text-base sm:text-lg text-gray-900 group-hover:text-blue-600 transition-colors duration-300 truncate">
                   {job.company}
                 </h3>
-                <p className="text-sm text-gray-600 font-medium">{job.title}</p>
+                <p className="text-sm text-gray-600 font-medium truncate">{job.title}</p>
               </div>
             </div>
           </div>
           
           {/* Status Badge */}
-          <div className={`status-badge ${status.bgColor} ${status.textColor} border border-opacity-20`}>
+          <div className={`status-badge ${status.bgColor} ${status.textColor} border border-opacity-20 self-start sm:self-auto`}>
             <div className="flex items-center space-x-1">
               {status.icon}
-              <span className="font-semibold">{job.status}</span>
+              <span className="font-semibold text-xs sm:text-sm">{job.status}</span>
             </div>
           </div>
         </div>
 
         {/* Date and Notes */}
         <div className="space-y-3">
-          <div className="flex items-center space-x-2 text-sm text-gray-500">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="flex items-center space-x-2 text-xs sm:text-sm text-gray-500">
+            <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
             <span className="font-medium">Applied: {formatDate(job.appliedDate)}</span>
@@ -95,7 +95,7 @@ export default function JobCard({ job }) {
           
           {job.notes && (
             <div className="bg-gray-50 rounded-lg p-3 border-l-4 border-gray-200">
-              <p className="text-sm text-gray-700 line-clamp-2 leading-relaxed">
+              <p className="text-xs sm:text-sm text-gray-700 line-clamp-2 leading-relaxed">
                 {job.notes}
               </p>
             </div>
@@ -104,7 +104,7 @@ export default function JobCard({ job }) {
 
         {/* Hover Indicator */}
         <div className="mt-4 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div className="flex items-center space-x-2 text-sm text-blue-600 font-medium">
+          <div className="flex items-center space-x-2 text-xs sm:text-sm text-blue-600 font-medium">
             <span>View Details</span>
             <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
