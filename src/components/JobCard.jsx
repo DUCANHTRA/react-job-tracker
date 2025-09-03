@@ -1,7 +1,7 @@
 // src/components/JobCard.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import formatDate from '../utils/formaDate';
+import formatDate from '../utils/formatDate';
 
 // Job card component
 export default function JobCard({ job }) {

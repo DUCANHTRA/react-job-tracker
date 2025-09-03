@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useJobs } from '../context/JobContext';
-import formatDate from '../utils/formaDate';
+import formatDate from '../utils/formatDate';
 
 export default function JobDetails() {
 
