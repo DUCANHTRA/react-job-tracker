@@ -9,6 +9,7 @@ A simple and intuitive job tracking application built with React. Keep track of 
 - **Job Details**: View and manage individual job information
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
 - **Modern UI**: Clean interface built with Tailwind CSS
+- **Import/Export**: Backup and restore your job data
 
 ## Tech Stack
 
@@ -44,6 +45,19 @@ npm start
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
+### Import Sample Data
+
+The application includes sample job data to help you get started:
+
+1. **Sample Data Location**: `data/job-applications.json` in the root directory
+2. **Import Process**:
+   - Click the "Import" button in the header
+   - Select the `job-applications.json` file from the `data/` folder
+   - Confirm the import to replace your current data
+   - The sample data includes 20+ job applications with various statuses
+
+**Note**: Importing will replace your current job data. Make sure to export your existing data first if you want to keep it.
+
 ## Available Scripts
 
 - `npm start` - Runs the app in development mode
@@ -61,4 +75,11 @@ src/
 ├── pages/         # Application pages
 └── utils/         # Utility functions
 ```
+
+## Data Management
+
+- **Export**: Save your job data as a JSON file for backup
+- **Import**: Load previously exported data or sample data
+- **Local Storage**: All data is automatically saved to your browser's local storage
+- **Sample Data**: Use the included sample data to explore the application features
 
