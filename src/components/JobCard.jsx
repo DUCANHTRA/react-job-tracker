@@ -59,27 +59,27 @@ export default function JobCard({ job }) {
         
         {/* Header with Company and Status */}
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4 space-y-3 sm:space-y-0">
-          <div className="flex-1">
-            <div className="flex items-center space-x-3 mb-2">
+          <div className="flex-1 min-w-0">
+            <div className="flex items-start space-x-3 mb-2">
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-gray-100 to-gray-200 rounded-lg flex items-center justify-center group-hover:bg-gradient-to-r group-hover:from-blue-100 group-hover:to-purple-100 transition-all duration-300 flex-shrink-0">
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600 group-hover:text-blue-600 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
               <div className="min-w-0 flex-1">
-                <h3 className="font-bold text-base sm:text-lg text-gray-900 group-hover:text-blue-600 transition-colors duration-300 truncate">
+                <h3 className="font-bold text-base sm:text-lg text-gray-900 group-hover:text-blue-600 transition-colors duration-300 break-words leading-tight">
                   {job.company}
                 </h3>
-                <p className="text-sm text-gray-600 font-medium truncate">{job.title}</p>
+                <p className="text-sm text-gray-600 font-medium break-words leading-tight mt-1">{job.title}</p>
               </div>
             </div>
           </div>
           
           {/* Status Badge */}
-          <div className={`status-badge ${status.bgColor} ${status.textColor} border border-opacity-20 self-start sm:self-auto`}>
+          <div className={`status-badge ${status.bgColor} ${status.textColor} border border-opacity-20 self-start sm:self-auto flex-shrink-0`}>
             <div className="flex items-center space-x-1">
               {status.icon}
-              <span className="font-semibold text-xs sm:text-sm">{job.status}</span>
+              <span className="font-semibold text-xs sm:text-sm whitespace-nowrap">{job.status}</span>
             </div>
           </div>
         </div>
